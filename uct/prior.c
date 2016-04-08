@@ -151,7 +151,7 @@ uct_prior_dcnn(struct uct *u, struct tree_node *node, struct prior_map *map)
 	float best_r[DCNN_BEST_N] = { 0.0, };
 	coord_t best_moves[DCNN_BEST_N];
 	float *data = dcnn_get_moves_data(map->b, map->to_play);
-	dcnn_get_moves(data, 13, r);
+	dcnn_get_moves(data, 2, r);
 	free(data);
 	find_dcnn_best_moves(map, r, best_moves, best_r);
 	print_dcnn_best_moves(node, map, best_moves, best_r);
