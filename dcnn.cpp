@@ -66,7 +66,7 @@ dcnn_init()
 void
 dcnn_get_moves(float *data, int channel, float result[])
 {
-  fsprintf(stderr, "dcnn channels: %d", channel);
+  fprintf(stderr, "dcnn channels: %d", channel);
   	int size = 19;
 	Blob<float> *blob = new Blob<float>(1,channel,size,size);
 	blob->set_cpu_data(data);
