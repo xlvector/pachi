@@ -45,8 +45,8 @@ dcnn_init()
 		return;
 
 	struct stat s;	
-	const char *model_file =   "movepredict.prototxt";
-	const char *trained_file = "movepredict.caffemodel";
+	const char *model_file =   "movepredict.prototxt.44";
+	const char *trained_file = "movepredict.caffemodel.44";
 	if (stat(model_file, &s) != 0  ||  stat(trained_file, &s) != 0) {
 		if (DEBUGL(1))
 			fprintf(stderr, "No dcnn files found, will not use dcnn code.\n");
