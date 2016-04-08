@@ -126,7 +126,6 @@ dcnn_get_moves_data(struct board *b, enum stone color)
 				coord_t c = coord_xy(b, j + 1, k + 1);
 				int offsetb = j * size + k;
 				int offsetw = size * size + size * j + k;
-				fprintf(stderr, "board_at %d : %d\n", c, board_at(b, c));
 				data[offsetb] = (board_at(b, c) == S_BLACK ? 1.0 : 0.0);
 				data[offsetw] = (board_at(b, c) == S_WHITE ? 1.0 : 0.0);
 			}
@@ -137,7 +136,6 @@ dcnn_get_moves_data(struct board *b, enum stone color)
 				coord_t c = coord_xy(b, j + 1, k + 1);
 				int offsetb = j * size + k;
 				int offsetw = size * size + size * j + k;
-				fprintf(stderr, "board_at %d : %d\n", c, board_at(b, c));
 				data[offsetb] = (board_at(b, c) == S_WHITE ? 1.0 : 0.0);
 				data[offsetw] = (board_at(b, c) == S_BLACK ? 1.0 : 0.0);
 			}
